@@ -1,0 +1,20 @@
+2c2
+< ccc ddd
+---
+> ccc dxd
+5c5
+< iii jjj
+---
+> ixi jjj
+7c7
+< mmm nnn
+---
+> mmm nxn
+9,10c9,10
+< rrr sss
+< ttt uuu
+\ No newline at end of file
+---
+> rxx sss
+> ttt uxu
+\ No newline at end of file

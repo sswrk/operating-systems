@@ -1,0 +1,94 @@
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000003
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000001
+Czas rzeczywisty: 0.000003
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+Usuwanie:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+50% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+90% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+50% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+90% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037

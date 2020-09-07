@@ -1,0 +1,4 @@
+cat ./main.c | head -10 | sort
+cat ./Makefile | wc -l
+cat ./main.c | wc -l
+ls -al ./ | sort | head -3

@@ -1,0 +1,2 @@
+fork: proces-dziecko dziedziczy ignorowanie, handlery i maskowanie; sygnal oczekujacy w rodzicu nie jest widoczny w dziecku
+exec: proces-dziecko dziedziczy ignorowanie i maskowanie; sygnal oczekujacy w rodzicu jest widoczny w dziecku

@@ -1,0 +1,159 @@
+CC = gcc -Wall -Wl,--no-as-needed -ldl
+Olevel = 0
+
+all: static shared clean
+
+static:
+	$(CC) -c library.c
+	ar rcs library.a library.o
+
+shared:
+	$(CC) -c -fPIC library.c
+	$(CC) -shared -fPIC -o library.so library.o
+
+clean:
+	rm -f *.o
+
+zad3_static:
+	make static
+	$(CC) -o test main.c library.a -I . -O$(Olevel)
+	make tests
+
+zad3_dynamic:
+	make shared
+	$(CC) -o test main_dynamic.c -I . -O$(Olevel)
+	make tests
+
+zad3_shared:
+	#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+	make shared
+	$(CC) -o test main.c -L. library.so -I . -O$(Olevel)
+	make tests
+
+zad3_all:
+
+	echo Poziom optymalizacji O1: > raport3b.txt
+
+	echo Z wykorzystaniem bibliotek statycznych: | tee -a raport3b.txt
+
+	make static
+	$(CC) -o test main.c library.a -I . -O1
+	make tests
+
+	echo Z wykorzystaniem bibliotek dynamicznych: | tee -a raport3b.txt
+	
+	make shared
+	$(CC) -o test main_dynamic.c -I . -O1
+	make tests
+
+	echo Z wykorzystaniem bibliotek dzielonych: | tee -a raport3b.txt
+	
+	$(CC) -o test main.c -L. library.so -I . -O1
+	make tests
+
+	echo Poziom optymalizacji O2: | tee -a raport3b.txt
+
+	echo Z wykorzystaniem bibliotek statycznych: | tee -a raport3b.txt
+
+	$(CC) -o test main.c library.a -I . -O2
+	make tests
+
+	echo Z wykorzystaniem bibliotek dynamicznych: | tee -a raport3b.txt
+	
+	$(CC) -o test main_dynamic.c -I . -O2
+	make tests
+
+	echo Z wykorzystaniem bibliotek dzielonych: | tee -a raport3b.txt
+	
+	$(CC) -o test main.c -L. library.so -I . -O2
+	make tests
+
+	echo Poziom optymalizacji O3: | tee -a raport3b.txt
+
+	echo Z wykorzystaniem bibliotek statycznych: | tee -a raport3b.txt
+
+	$(CC) -o test main.c library.a -I . -O3
+	make tests
+
+	echo Z wykorzystaniem bibliotek dynamicznych: | tee -a raport3b.txt
+	
+	$(CC) -o test main_dynamic.c -I . -O3
+	make tests
+
+	echo Z wykorzystaniem bibliotek dzielonych: | tee -a raport3b.txt
+	
+	$(CC) -o test main.c -L. library.so -I . -O3
+	make tests
+
+
+tests:
+	echo Testy: | tee -a raport3b.txt
+
+	echo Mala ilosc porownan: | tee -a raport3b.txt
+
+	echo Zapisywanie: | tee -a raport3b.txt
+
+	echo 10% podobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/10similarity/1a.txt:txt_files/10similarity/1b.txt txt_files/10similarity/2a.txt:txt_files/10similarity/2b.txt txt_files/10similarity/3a.txt:txt_files/10similarity/3b.txt  | tee -a raport3b.txt
+	echo 50% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/50similarity/1a.txt:txt_files/50similarity/1b.txt txt_files/50similarity/2a.txt:txt_files/50similarity/2b.txt txt_files/50similarity/3a.txt:txt_files/50similarity/3b.txt | tee -a raport3b.txt
+	echo 90% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/90similarity/1a.txt:txt_files/90similarity/1b.txt txt_files/90similarity/2a.txt:txt_files/90similarity/2b.txt txt_files/90similarity/3a.txt:txt_files/90similarity/3b.txt | tee -a raport3b.txt
+	
+	echo Usuwanie: | tee -a raport3b.txt
+
+	echo 10% podobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/10similarity/1a.txt:txt_files/10similarity/1b.txt txt_files/10similarity/2a.txt:txt_files/10similarity/2b.txt txt_files/10similarity/3a.txt:txt_files/10similarity/3b.txt remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+	echo 50% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/50similarity/1a.txt:txt_files/50similarity/1b.txt txt_files/50similarity/2a.txt:txt_files/50similarity/2b.txt txt_files/50similarity/3a.txt:txt_files/50similarity/3b.txt remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+	echo 90% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/90similarity/1a.txt:txt_files/90similarity/1b.txt txt_files/90similarity/2a.txt:txt_files/90similarity/2b.txt txt_files/90similarity/3a.txt:txt_files/90similarity/3b.txt remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+	
+	echo Zapisywanie i usuwanie na przemian: | tee -a raport3b.txt
+
+	echo 10% podobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/10similarity/1a.txt:txt_files/10similarity/1b.txt remove_block 0 compare_pairs txt_files/10similarity/2a.txt:txt_files/10similarity/2b.txt remove_block 0 compare_pairs txt_files/10similarity/3a.txt:txt_files/10similarity/3b.txt remove_block 0 | tee -a raport3b.txt
+	echo 50% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/50similarity/1a.txt:txt_files/50similarity/1b.txt remove_block 0 compare_pairs txt_files/50similarity/2a.txt:txt_files/50similarity/2b.txt remove_block 0 compare_pairs txt_files/50similarity/3a.txt:txt_files/50similarity/3b.txt remove_block 0 | tee -a raport3b.txt
+	echo 90% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 3 compare_pairs txt_files/90similarity/1a.txt:txt_files/90similarity/1b.txt remove_block 0 compare_pairs txt_files/90similarity/2a.txt:txt_files/90similarity/2b.txt remove_block 0 compare_pairs txt_files/90similarity/3a.txt:txt_files/90similarity/3b.txt remove_block 0 | tee -a raport3b.txt
+	
+
+	echo Srednia ilosc porownan: | tee -a raport3b.txt
+
+	echo Zapisywanie: | tee -a raport3b.txt
+
+	echo 10% podobienstwa: | tee -a raport3b.txt
+	./test 15 compare_pairs txt_files/10similarity/1a.txt:txt_files/10similarity/1b.txt txt_files/10similarity/2a.txt:txt_files/10similarity/2b.txt txt_files/10similarity/3a.txt:txt_files/10similarity/3b.txt txt_files/10similarity/4a.txt:txt_files/10similarity/4b.txt txt_files/10similarity/5a.txt:txt_files/10similarity/5b.txt txt_files/10similarity/6a.txt:txt_files/10similarity/6b.txt txt_files/10similarity/7a.txt:txt_files/10similarity/7b.txt txt_files/10similarity/8a.txt:txt_files/10similarity/8b.txt txt_files/10similarity/9a.txt:txt_files/10similarity/9b.txt txt_files/10similarity/10a.txt:txt_files/10similarity/10b.txt txt_files/10similarity/11a.txt:txt_files/10similarity/11b.txt txt_files/10similarity/12a.txt:txt_files/10similarity/12b.txt txt_files/10similarity/13a.txt:txt_files/10similarity/13b.txt txt_files/10similarity/14a.txt:txt_files/10similarity/14b.txt txt_files/10similarity/15a.txt:txt_files/10similarity/15b.txt | tee -a raport3b.txt
+	echo 50% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 15 compare_pairs txt_files/50similarity/1a.txt:txt_files/50similarity/1b.txt txt_files/50similarity/2a.txt:txt_files/50similarity/2b.txt txt_files/50similarity/3a.txt:txt_files/50similarity/3b.txt txt_files/50similarity/4a.txt:txt_files/50similarity/4b.txt txt_files/50similarity/5a.txt:txt_files/50similarity/5b.txt txt_files/50similarity/6a.txt:txt_files/50similarity/6b.txt txt_files/50similarity/7a.txt:txt_files/50similarity/7b.txt txt_files/50similarity/8a.txt:txt_files/50similarity/8b.txt txt_files/50similarity/9a.txt:txt_files/50similarity/9b.txt txt_files/50similarity/10a.txt:txt_files/50similarity/10b.txt txt_files/50similarity/11a.txt:txt_files/50similarity/11b.txt txt_files/50similarity/12a.txt:txt_files/50similarity/12b.txt txt_files/50similarity/13a.txt:txt_files/50similarity/13b.txt txt_files/50similarity/14a.txt:txt_files/50similarity/14b.txt txt_files/50similarity/15a.txt:txt_files/50similarity/15b.txt | tee -a raport3b.txt
+	echo 90% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 15 compare_pairs txt_files/90similarity/1a.txt:txt_files/90similarity/1b.txt txt_files/90similarity/2a.txt:txt_files/90similarity/2b.txt txt_files/90similarity/3a.txt:txt_files/90similarity/3b.txt txt_files/90similarity/4a.txt:txt_files/90similarity/4b.txt txt_files/90similarity/5a.txt:txt_files/90similarity/5b.txt txt_files/90similarity/6a.txt:txt_files/90similarity/6b.txt txt_files/90similarity/7a.txt:txt_files/90similarity/7b.txt txt_files/90similarity/8a.txt:txt_files/90similarity/8b.txt txt_files/90similarity/9a.txt:txt_files/90similarity/9b.txt txt_files/90similarity/10a.txt:txt_files/90similarity/10b.txt txt_files/90similarity/11a.txt:txt_files/90similarity/11b.txt txt_files/90similarity/12a.txt:txt_files/90similarity/12b.txt txt_files/90similarity/13a.txt:txt_files/90similarity/13b.txt txt_files/90similarity/14a.txt:txt_files/90similarity/14b.txt txt_files/90similarity/15a.txt:txt_files/90similarity/15b.txt | tee -a raport3b.txt
+	
+	echo Usuwanie: | tee -a raport3b.txt
+
+	./test 15 compare_pairs txt_files/10similarity/1a.txt:txt_files/10similarity/1b.txt txt_files/10similarity/2a.txt:txt_files/10similarity/2b.txt txt_files/10similarity/3a.txt:txt_files/10similarity/3b.txt txt_files/10similarity/4a.txt:txt_files/10similarity/4b.txt txt_files/10similarity/5a.txt:txt_files/10similarity/5b.txt txt_files/10similarity/6a.txt:txt_files/10similarity/6b.txt txt_files/10similarity/7a.txt:txt_files/10similarity/7b.txt txt_files/10similarity/8a.txt:txt_files/10similarity/8b.txt txt_files/10similarity/9a.txt:txt_files/10similarity/9b.txt txt_files/10similarity/10a.txt:txt_files/10similarity/10b.txt txt_files/10similarity/11a.txt:txt_files/10similarity/11b.txt txt_files/10similarity/12a.txt:txt_files/10similarity/12b.txt txt_files/10similarity/13a.txt:txt_files/10similarity/13b.txt txt_files/10similarity/14a.txt:txt_files/10similarity/14b.txt txt_files/10similarity/15a.txt:txt_files/10similarity/15b.txt remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+	echo 50% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 15 compare_pairs txt_files/50similarity/1a.txt:txt_files/50similarity/1b.txt txt_files/50similarity/2a.txt:txt_files/50similarity/2b.txt txt_files/50similarity/3a.txt:txt_files/50similarity/3b.txt txt_files/50similarity/4a.txt:txt_files/50similarity/4b.txt txt_files/50similarity/5a.txt:txt_files/50similarity/5b.txt txt_files/50similarity/6a.txt:txt_files/50similarity/6b.txt txt_files/50similarity/7a.txt:txt_files/50similarity/7b.txt txt_files/50similarity/8a.txt:txt_files/50similarity/8b.txt txt_files/50similarity/9a.txt:txt_files/50similarity/9b.txt txt_files/50similarity/10a.txt:txt_files/50similarity/10b.txt txt_files/50similarity/11a.txt:txt_files/50similarity/11b.txt txt_files/50similarity/12a.txt:txt_files/50similarity/12b.txt txt_files/50similarity/13a.txt:txt_files/50similarity/13b.txt txt_files/50similarity/14a.txt:txt_files/50similarity/14b.txt txt_files/50similarity/15a.txt:txt_files/50similarity/15b.txt remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+	echo 90% prawdopodobienstwa: | tee -a raport3b.txt
+	./test 15 compare_pairs txt_files/90similarity/1a.txt:txt_files/90similarity/1b.txt txt_files/90similarity/2a.txt:txt_files/90similarity/2b.txt txt_files/90similarity/3a.txt:txt_files/90similarity/3b.txt txt_files/90similarity/4a.txt:txt_files/90similarity/4b.txt txt_files/90similarity/5a.txt:txt_files/90similarity/5b.txt txt_files/90similarity/6a.txt:txt_files/90similarity/6b.txt txt_files/90similarity/7a.txt:txt_files/90similarity/7b.txt txt_files/90similarity/8a.txt:txt_files/90similarity/8b.txt txt_files/90similarity/9a.txt:txt_files/90similarity/9b.txt txt_files/90similarity/10a.txt:txt_files/90similarity/10b.txt txt_files/90similarity/11a.txt:txt_files/90similarity/11b.txt txt_files/90similarity/12a.txt:txt_files/90similarity/12b.txt txt_files/90similarity/13a.txt:txt_files/90similarity/13b.txt txt_files/90similarity/14a.txt:txt_files/90similarity/14b.txt txt_files/90similarity/15a.txt:txt_files/90similarity/15b.txt remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+
+	echo Duza ilosc porownan: | tee -a raport3b.txt
+
+	echo Zapisywanie: | tee -a raport3b.txt
+
+	echo 10% podobienstwa: | tee -a raport3b.txt
+	./test 30 compare_pairs txt_files/10similarity/1a.txt:txt_files/10similarity/1b.txt txt_files/10similarity/2a.txt:txt_files/10similarity/2b.txt txt_files/10similarity/3a.txt:txt_files/10similarity/3b.txt txt_files/10similarity/4a.txt:txt_files/10similarity/4b.txt txt_files/10similarity/5a.txt:txt_files/10similarity/5b.txt txt_files/10similarity/6a.txt:txt_files/10similarity/6b.txt txt_files/10similarity/7a.txt:txt_files/10similarity/7b.txt txt_files/10similarity/8a.txt:txt_files/10similarity/8b.txt txt_files/10similarity/9a.txt:txt_files/10similarity/9b.txt txt_files/10similarity/10a.txt:txt_files/10similarity/10b.txt txt_files/10similarity/11a.txt:txt_files/10similarity/11b.txt txt_files/10similarity/12a.txt:txt_files/10similarity/12b.txt txt_files/10similarity/13a.txt:txt_files/10similarity/13b.txt txt_files/10similarity/14a.txt:txt_files/10similarity/14b.txt txt_files/10similarity/15a.txt:txt_files/10similarity/15b.txt txt_files/10similarity/16a.txt:txt_files/10similarity/16b.txt txt_files/10similarity/17a.txt:txt_files/10similarity/17b.txt txt_files/10similarity/18a.txt:txt_files/10similarity/18b.txt txt_files/10similarity/19a.txt:txt_files/10similarity/19b.txt txt_files/10similarity/20a.txt:txt_files/10similarity/20b.txt txt_files/10similarity/21a.txt:txt_files/10similarity/21b.txt txt_files/10similarity/22a.txt:txt_files/10similarity/22b.txt txt_files/10similarity/23a.txt:txt_files/10similarity/23b.txt txt_files/10similarity/24a.txt:txt_files/10similarity/24b.txt txt_files/10similarity/25a.txt:txt_files/10similarity/25b.txt txt_files/10similarity/26a.txt:txt_files/10similarity/26b.txt txt_files/10similarity/27a.txt:txt_files/10similarity/27b.txt txt_files/10similarity/28a.txt:txt_files/10similarity/28b.txt txt_files/10similarity/29a.txt:txt_files/10similarity/29b.txt txt_files/10similarity/30a.txt:txt_files/10similarity/30b.txt | tee -a raport3b.txt
+	echo 50% podobienstwa: | tee -a raport3b.txt
+	./test 30 compare_pairs txt_files/50similarity/1a.txt:txt_files/50similarity/1b.txt txt_files/50similarity/2a.txt:txt_files/50similarity/2b.txt txt_files/50similarity/3a.txt:txt_files/50similarity/3b.txt txt_files/50similarity/4a.txt:txt_files/50similarity/4b.txt txt_files/50similarity/5a.txt:txt_files/50similarity/5b.txt txt_files/50similarity/6a.txt:txt_files/50similarity/6b.txt txt_files/50similarity/7a.txt:txt_files/50similarity/7b.txt txt_files/50similarity/8a.txt:txt_files/50similarity/8b.txt txt_files/50similarity/9a.txt:txt_files/50similarity/9b.txt txt_files/50similarity/10a.txt:txt_files/50similarity/10b.txt txt_files/50similarity/11a.txt:txt_files/50similarity/11b.txt txt_files/50similarity/12a.txt:txt_files/50similarity/12b.txt txt_files/50similarity/13a.txt:txt_files/50similarity/13b.txt txt_files/50similarity/14a.txt:txt_files/50similarity/14b.txt txt_files/50similarity/15a.txt:txt_files/50similarity/15b.txt txt_files/50similarity/16a.txt:txt_files/50similarity/16b.txt txt_files/50similarity/17a.txt:txt_files/50similarity/17b.txt txt_files/50similarity/18a.txt:txt_files/50similarity/18b.txt txt_files/50similarity/19a.txt:txt_files/50similarity/19b.txt txt_files/50similarity/20a.txt:txt_files/50similarity/20b.txt txt_files/50similarity/21a.txt:txt_files/50similarity/21b.txt txt_files/50similarity/22a.txt:txt_files/50similarity/22b.txt txt_files/50similarity/23a.txt:txt_files/50similarity/23b.txt txt_files/50similarity/24a.txt:txt_files/50similarity/24b.txt txt_files/50similarity/25a.txt:txt_files/50similarity/25b.txt txt_files/50similarity/26a.txt:txt_files/50similarity/26b.txt txt_files/50similarity/27a.txt:txt_files/50similarity/27b.txt txt_files/50similarity/28a.txt:txt_files/50similarity/28b.txt txt_files/50similarity/29a.txt:txt_files/50similarity/29b.txt txt_files/50similarity/30a.txt:txt_files/50similarity/30b.txt | tee -a raport3b.txt
+	echo 90% podobienstwa: | tee -a raport3b.txt
+	./test 30 compare_pairs txt_files/90similarity/1a.txt:txt_files/90similarity/1b.txt txt_files/90similarity/2a.txt:txt_files/90similarity/2b.txt txt_files/90similarity/3a.txt:txt_files/90similarity/3b.txt txt_files/90similarity/4a.txt:txt_files/90similarity/4b.txt txt_files/90similarity/5a.txt:txt_files/90similarity/5b.txt txt_files/90similarity/6a.txt:txt_files/90similarity/6b.txt txt_files/90similarity/7a.txt:txt_files/90similarity/7b.txt txt_files/90similarity/8a.txt:txt_files/90similarity/8b.txt txt_files/90similarity/9a.txt:txt_files/90similarity/9b.txt txt_files/90similarity/10a.txt:txt_files/90similarity/10b.txt txt_files/90similarity/11a.txt:txt_files/90similarity/11b.txt txt_files/90similarity/12a.txt:txt_files/90similarity/12b.txt txt_files/90similarity/13a.txt:txt_files/90similarity/13b.txt txt_files/90similarity/14a.txt:txt_files/90similarity/14b.txt txt_files/90similarity/15a.txt:txt_files/90similarity/15b.txt txt_files/90similarity/16a.txt:txt_files/90similarity/16b.txt txt_files/90similarity/17a.txt:txt_files/90similarity/17b.txt txt_files/90similarity/18a.txt:txt_files/90similarity/18b.txt txt_files/90similarity/19a.txt:txt_files/90similarity/19b.txt txt_files/90similarity/20a.txt:txt_files/90similarity/20b.txt txt_files/90similarity/21a.txt:txt_files/90similarity/21b.txt txt_files/90similarity/22a.txt:txt_files/90similarity/22b.txt txt_files/90similarity/23a.txt:txt_files/90similarity/23b.txt txt_files/90similarity/24a.txt:txt_files/90similarity/24b.txt txt_files/90similarity/25a.txt:txt_files/90similarity/25b.txt txt_files/90similarity/26a.txt:txt_files/90similarity/26b.txt txt_files/90similarity/27a.txt:txt_files/90similarity/27b.txt txt_files/90similarity/28a.txt:txt_files/90similarity/28b.txt txt_files/90similarity/29a.txt:txt_files/90similarity/29b.txt txt_files/90similarity/30a.txt:txt_files/90similarity/30b.txt | tee -a raport3b.txt
+
+	echo Usuwanie: | tee -a raport3b.txt
+
+	echo 10% podobienstwa: | tee -a raport3b.txt
+	./test 30 compare_pairs txt_files/10similarity/1a.txt:txt_files/10similarity/1b.txt txt_files/10similarity/2a.txt:txt_files/10similarity/2b.txt txt_files/10similarity/3a.txt:txt_files/10similarity/3b.txt txt_files/10similarity/4a.txt:txt_files/10similarity/4b.txt txt_files/10similarity/5a.txt:txt_files/10similarity/5b.txt txt_files/10similarity/6a.txt:txt_files/10similarity/6b.txt txt_files/10similarity/7a.txt:txt_files/10similarity/7b.txt txt_files/10similarity/8a.txt:txt_files/10similarity/8b.txt txt_files/10similarity/9a.txt:txt_files/10similarity/9b.txt txt_files/10similarity/10a.txt:txt_files/10similarity/10b.txt txt_files/10similarity/11a.txt:txt_files/10similarity/11b.txt txt_files/10similarity/12a.txt:txt_files/10similarity/12b.txt txt_files/10similarity/13a.txt:txt_files/10similarity/13b.txt txt_files/10similarity/14a.txt:txt_files/10similarity/14b.txt txt_files/10similarity/15a.txt:txt_files/10similarity/15b.txt txt_files/10similarity/16a.txt:txt_files/10similarity/16b.txt txt_files/10similarity/17a.txt:txt_files/10similarity/17b.txt txt_files/10similarity/18a.txt:txt_files/10similarity/18b.txt txt_files/10similarity/19a.txt:txt_files/10similarity/19b.txt txt_files/10similarity/20a.txt:txt_files/10similarity/20b.txt txt_files/10similarity/21a.txt:txt_files/10similarity/21b.txt txt_files/10similarity/22a.txt:txt_files/10similarity/22b.txt txt_files/10similarity/23a.txt:txt_files/10similarity/23b.txt txt_files/10similarity/24a.txt:txt_files/10similarity/24b.txt txt_files/10similarity/25a.txt:txt_files/10similarity/25b.txt txt_files/10similarity/26a.txt:txt_files/10similarity/26b.txt txt_files/10similarity/27a.txt:txt_files/10similarity/27b.txt txt_files/10similarity/28a.txt:txt_files/10similarity/28b.txt txt_files/10similarity/29a.txt:txt_files/10similarity/29b.txt txt_files/10similarity/30a.txt:txt_files/10similarity/30b.txt remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+	echo 50% podobienstwa: | tee -a raport3b.txt
+	./test 30 compare_pairs txt_files/50similarity/1a.txt:txt_files/50similarity/1b.txt txt_files/50similarity/2a.txt:txt_files/50similarity/2b.txt txt_files/50similarity/3a.txt:txt_files/50similarity/3b.txt txt_files/50similarity/4a.txt:txt_files/50similarity/4b.txt txt_files/50similarity/5a.txt:txt_files/50similarity/5b.txt txt_files/50similarity/6a.txt:txt_files/50similarity/6b.txt txt_files/50similarity/7a.txt:txt_files/50similarity/7b.txt txt_files/50similarity/8a.txt:txt_files/50similarity/8b.txt txt_files/50similarity/9a.txt:txt_files/50similarity/9b.txt txt_files/50similarity/10a.txt:txt_files/50similarity/10b.txt txt_files/50similarity/11a.txt:txt_files/50similarity/11b.txt txt_files/50similarity/12a.txt:txt_files/50similarity/12b.txt txt_files/50similarity/13a.txt:txt_files/50similarity/13b.txt txt_files/50similarity/14a.txt:txt_files/50similarity/14b.txt txt_files/50similarity/15a.txt:txt_files/50similarity/15b.txt txt_files/50similarity/16a.txt:txt_files/50similarity/16b.txt txt_files/50similarity/17a.txt:txt_files/50similarity/17b.txt txt_files/50similarity/18a.txt:txt_files/50similarity/18b.txt txt_files/50similarity/19a.txt:txt_files/50similarity/19b.txt txt_files/50similarity/20a.txt:txt_files/50similarity/20b.txt txt_files/50similarity/21a.txt:txt_files/50similarity/21b.txt txt_files/50similarity/22a.txt:txt_files/50similarity/22b.txt txt_files/50similarity/23a.txt:txt_files/50similarity/23b.txt txt_files/50similarity/24a.txt:txt_files/50similarity/24b.txt txt_files/50similarity/25a.txt:txt_files/50similarity/25b.txt txt_files/50similarity/26a.txt:txt_files/50similarity/26b.txt txt_files/50similarity/27a.txt:txt_files/50similarity/27b.txt txt_files/50similarity/28a.txt:txt_files/50similarity/28b.txt txt_files/50similarity/29a.txt:txt_files/50similarity/29b.txt txt_files/50similarity/30a.txt:txt_files/50similarity/30b.txt remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt
+	echo 90% podobienstwa: | tee -a raport3b.txt
+	./test 30 compare_pairs txt_files/90similarity/1a.txt:txt_files/90similarity/1b.txt txt_files/90similarity/2a.txt:txt_files/90similarity/2b.txt txt_files/90similarity/3a.txt:txt_files/90similarity/3b.txt txt_files/90similarity/4a.txt:txt_files/90similarity/4b.txt txt_files/90similarity/5a.txt:txt_files/90similarity/5b.txt txt_files/90similarity/6a.txt:txt_files/90similarity/6b.txt txt_files/90similarity/7a.txt:txt_files/90similarity/7b.txt txt_files/90similarity/8a.txt:txt_files/90similarity/8b.txt txt_files/90similarity/9a.txt:txt_files/90similarity/9b.txt txt_files/90similarity/10a.txt:txt_files/90similarity/10b.txt txt_files/90similarity/11a.txt:txt_files/90similarity/11b.txt txt_files/90similarity/12a.txt:txt_files/90similarity/12b.txt txt_files/90similarity/13a.txt:txt_files/90similarity/13b.txt txt_files/90similarity/14a.txt:txt_files/90similarity/14b.txt txt_files/90similarity/15a.txt:txt_files/90similarity/15b.txt txt_files/90similarity/16a.txt:txt_files/90similarity/16b.txt txt_files/90similarity/17a.txt:txt_files/90similarity/17b.txt txt_files/90similarity/18a.txt:txt_files/90similarity/18b.txt txt_files/90similarity/19a.txt:txt_files/90similarity/19b.txt txt_files/90similarity/20a.txt:txt_files/90similarity/20b.txt txt_files/90similarity/21a.txt:txt_files/90similarity/21b.txt txt_files/90similarity/22a.txt:txt_files/90similarity/22b.txt txt_files/90similarity/23a.txt:txt_files/90similarity/23b.txt txt_files/90similarity/24a.txt:txt_files/90similarity/24b.txt txt_files/90similarity/25a.txt:txt_files/90similarity/25b.txt txt_files/90similarity/26a.txt:txt_files/90similarity/26b.txt txt_files/90similarity/27a.txt:txt_files/90similarity/27b.txt txt_files/90similarity/28a.txt:txt_files/90similarity/28b.txt txt_files/90similarity/29a.txt:txt_files/90similarity/29b.txt txt_files/90similarity/30a.txt:txt_files/90similarity/30b.txt remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 remove_block 0 | tee -a raport3b.txt

@@ -1,0 +1,5 @@
+Rodzaj operacji: sortowanie sys, ilosc: 100, bajty: 10
+Czas rzeczywisty:: 0.020000
+Czas uzytkownika: 0.010000
+Czas systemowy: 0.000000
+

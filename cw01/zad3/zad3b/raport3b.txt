@@ -1,0 +1,858 @@
+Poziom optymalizacji O1:
+Z wykorzystaniem bibliotek statycznych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000003
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000003
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+Usuwanie:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000018
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000020
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+50% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+90% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+50% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000043
+90% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000040
+Z wykorzystaniem bibliotek dynamicznych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000009
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000026
+Usuwanie:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+50% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+90% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000044
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+50% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000037
+90% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+Z wykorzystaniem bibliotek dzielonych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+50% prawdopodobienstwa:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000007
+90% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000018
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000017
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000013
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000022
+Usuwanie:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000023
+50% prawdopodobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000021
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000058
+50% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000045
+90% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000061
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000049
+50% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000043
+90% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000045
+Poziom optymalizacji O2:
+Z wykorzystaniem bibliotek statycznych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000008
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000007
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000010
+50% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000001
+Czas rzeczywisty: 0.000021
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000020
+90% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000027
+Usuwanie:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000032
+50% prawdopodobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000028
+90% prawdopodobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000025
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+50% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+90% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+50% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000040
+90% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000040
+Z wykorzystaniem bibliotek dynamicznych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000033
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000026
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000023
+Usuwanie:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000041
+50% prawdopodobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000023
+90% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000022
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000047
+50% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000001
+Czas rzeczywisty: 0.000044
+90% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000041
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000058
+50% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000042
+90% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000042
+Z wykorzystaniem bibliotek dzielonych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000017
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000007
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+90% prawdopodobienstwa:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000012
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000025
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000021
+90% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000022
+Usuwanie:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000026
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000025
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000053
+50% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000072
+90% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000045
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000047
+50% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000046
+90% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000063
+Poziom optymalizacji O3:
+Z wykorzystaniem bibliotek statycznych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000006
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000022
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000020
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000025
+Usuwanie:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000020
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+50% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+90% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000040
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000005
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+50% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+90% podobienstwa:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+Z wykorzystaniem bibliotek dynamicznych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+50% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000020
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000024
+90% prawdopodobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000035
+Usuwanie:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000020
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+50% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+90% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000042
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000039
+50% podobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000043
+90% podobienstwa:
+Czas systemowy: 0.000005
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
+Z wykorzystaniem bibliotek dzielonych:
+Testy:
+Mala ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000005
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000003
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Zapisywanie i usuwanie na przemian:
+10% podobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000003
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+90% prawdopodobienstwa:
+Czas systemowy: 0.000001
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000004
+Srednia ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000018
+50% prawdopodobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000020
+90% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+Usuwanie:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000019
+50% prawdopodobienstwa:
+Czas systemowy: 0.000000
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000022
+90% prawdopodobienstwa:
+Czas systemowy: 0.000002
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000035
+Duza ilosc porownan:
+Zapisywanie:
+10% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000047
+50% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000044
+90% podobienstwa:
+Czas systemowy: 0.000006
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000041
+Usuwanie:
+10% podobienstwa:
+Czas systemowy: 0.000007
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000045
+50% podobienstwa:
+Czas systemowy: 0.000003
+Czas użytkownika: 0.000001
+Czas rzeczywisty: 0.000041
+90% podobienstwa:
+Czas systemowy: 0.000004
+Czas użytkownika: 0.000000
+Czas rzeczywisty: 0.000038
